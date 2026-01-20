@@ -38,8 +38,13 @@ body {
     margin: 120px auto;
 }
 
-.title-color-orange {
+.color-orange {
     color: var(--primary-color);
+}
+
+.section-title {
+    font-size: 3.1rem;
+    font-weight: bold;
 }
 
 .section-description {
@@ -47,6 +52,14 @@ body {
     font-size: 1.3rem;
 }
 
+.btn-primary {
+    background-color: var(--primary-color);
+    padding: 13px;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+
+}
 
 
 
@@ -75,14 +88,17 @@ body {
     gap: 48px;
     color: var(--light-gray);
 }
+
 .navbar-link-container li:first-child {
     color: #252432;
     font-weight: bold;
 }
+
 .navbar-link-container li:last-child {
     color: black;
 }
-.nav-link a:hover{
+
+.nav-link a:hover {
     color: var(--primary-color);
 }
 
@@ -108,6 +124,45 @@ body {
     width: 100%;
 }
 
+/* plans related styles */
+.plans {
+    text-align: center;
+}
+
+.plants-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    row-gap: 30px;
+    margin-top: 50px;
+    justify-self: center;
+}
+
+.plants-card {
+    max-width: 270px;
+        width: 100%;
+}
+
+.plants-card-title,
+.plants-price {
+    color: var(--secondary-color);
+    font-weight: bold;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.plants-card img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -117,8 +172,10 @@ body {
 /* responsive for small device */
 @media screen and (max-width:576px) {
 
-    .navbar {
-        width: 90%;
+    .navbar , 
+    .plans 
+    {
+        width: 95%;
 
     }
 
@@ -129,7 +186,7 @@ body {
     /* banner related styles */
     .banner {
         flex-direction: column-reverse;
-        gap: 40px;   
+        gap: 40px;
     }
 
     .banner-content {
@@ -141,9 +198,23 @@ body {
         color: black;
         font-weight: bold;
     }
-    .banner-img-container{
+
+    .banner-img-container {
         width: 100%;
     }
+
+    /* plans related styles */
+    .plants-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 40px;
+
+    }
+
+    .plants-card {
+        max-width: 171px;
+        width: 100%;
+    }
+
     
 
 }
@@ -164,10 +235,18 @@ body {
 /* responsive for medium device */
 @media screen and (min-width:576px) and (max-width:992px) {
 
-    .fixed-width  {
+    .fixed-width {
         width: 90%;
+    }
+    /* plans related styles */
+    .plants-container {
+        grid-template-columns: repeat(3, 1fr);
 
     }
 
+    .plants-card {
+        max-width: 200px;
+        width: 100%;
+    }
 
 }
