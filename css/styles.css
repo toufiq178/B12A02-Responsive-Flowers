@@ -124,8 +124,8 @@ body {
     width: 100%;
 }
 
-/* plans related styles */
-.plans {
+/* plants related styles */
+.plants {
     text-align: center;
 }
 
@@ -140,7 +140,7 @@ body {
 
 .plants-card {
     max-width: 270px;
-        width: 100%;
+    width: 100%;
 }
 
 .plants-card-title,
@@ -155,7 +155,37 @@ body {
     width: 100%;
 }
 
+/* <!-- Flower related styles--> */
+.flower {
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    margin-top: clamp(50px, 10vw, 200px);
+}
 
+.flower-img-container,
+.flower-content {
+    width: 50%;
+}
+
+.flower-img-container {
+    position: relative;
+}
+
+#badge {
+    max-width: 286px;
+    max-height: 286px;
+    position: absolute;
+    top: -22%;
+    right: -20%;
+    filter: drop-shadow(4px 10px 4px rgba(0, 0, 0, 0.5));
+}
+
+.flower-detail-container li {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 20px;
+}
 
 
 
@@ -172,9 +202,16 @@ body {
 /* responsive for small device */
 @media screen and (max-width:576px) {
 
-    .navbar , 
-    .plans 
-    {
+    .section-title {
+        font-size: 2.1rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .navbar,
+    .plants {
         width: 95%;
 
     }
@@ -203,7 +240,7 @@ body {
         width: 100%;
     }
 
-    /* plans related styles */
+    /* plants related styles */
     .plants-container {
         grid-template-columns: repeat(2, 1fr);
         margin-top: 40px;
@@ -215,7 +252,20 @@ body {
         width: 100%;
     }
 
-    
+    /* <!-- Flower related styles--> */
+    .flower {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .flower-img-container,
+    .flower-content {
+        width: 95%;
+    }
+
+    #badge {
+        display: none;
+    }
 
 }
 
@@ -235,10 +285,18 @@ body {
 /* responsive for medium device */
 @media screen and (min-width:576px) and (max-width:992px) {
 
+    .section-title {
+        font-size: 2.6rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
     .fixed-width {
         width: 90%;
     }
-    /* plans related styles */
+
+    /* plants related styles */
     .plants-container {
         grid-template-columns: repeat(3, 1fr);
 
@@ -248,5 +306,20 @@ body {
         max-width: 200px;
         width: 100%;
     }
+
+    /* <!-- Flower related styles--> */
+    .flower {
+        gap: 45px;
+    }
+
+    .flower-content {
+        width: 40%;
+    }
+
+    #badge {
+        max-width: 200px;
+        max-height: 200px;
+    }
+
 
 }
