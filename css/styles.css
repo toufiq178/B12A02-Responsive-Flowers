@@ -1,0 +1,173 @@
+/* fonts styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.inter-font {
+    font-family: "Inter", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+.noto-serif-font {
+    font-family: "Noto Serif", serif;
+}
+
+/* shared styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #F5F8FF;
+}
+
+.display-flex {
+    display: flex;
+}
+
+:root {
+    --primary-color: #E95A08;
+    --secondary-color: #111111;
+    --light-gray: rgba(0, 0, 0, 0.5);
+}
+
+.fixed-width {
+    max-width: 1140px;
+    margin: 120px auto;
+}
+
+.title-color-orange {
+    color: var(--primary-color);
+}
+
+.section-description {
+    color: var(--light-gray);
+    font-size: 1.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* main styles */
+/* navbar related styles */
+.navbar {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.navbar-link-container {
+    gap: 48px;
+    color: var(--light-gray);
+}
+.navbar-link-container li:first-child {
+    color: #252432;
+    font-weight: bold;
+}
+.navbar-link-container li:last-child {
+    color: black;
+}
+.nav-link a:hover{
+    color: var(--primary-color);
+}
+
+
+/* banner related styles */
+.banner {
+
+    justify-content: space-between;
+    align-items: end;
+}
+
+.banner-content {
+    width: 50%;
+}
+
+.banner-title {
+    font-size: 4rem;
+    color: black;
+    font-weight: bold;
+}
+
+.banner-img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* responsive for small device */
+@media screen and (max-width:576px) {
+
+    .navbar {
+        width: 90%;
+
+    }
+
+    .display-none {
+        display: none;
+    }
+
+    /* banner related styles */
+    .banner {
+        flex-direction: column-reverse;
+        gap: 40px;   
+    }
+
+    .banner-content {
+        width: 95%;
+    }
+
+    .banner-title {
+        font-size: 2.4rem;
+        color: black;
+        font-weight: bold;
+    }
+    .banner-img-container{
+        width: 100%;
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* responsive for medium device */
+@media screen and (min-width:576px) and (max-width:992px) {
+
+    .fixed-width  {
+        width: 90%;
+
+    }
+
+
+}
