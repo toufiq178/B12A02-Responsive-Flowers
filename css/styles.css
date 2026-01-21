@@ -297,26 +297,54 @@ body {
 .join-container {
     max-width: 830px;
 }
+
 .join-container>h3 {
     color: white;
     margin-bottom: 20px;
 }
+
 .email-container>input {
     background-color: white;
     padding-left: 20px;
     width: 70%;
     border: none;
-    outline: none; 
+    outline: none;
 }
+
 .subscribe-btn {
     width: 30%;
 }
 
+/* footer related styles */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 100px;
 
+}
 
+.footer-content {
+    grid-column: span 2;
+}
 
+.footer-content>img {
+    margin-bottom: 16px;
+}
 
+.footer-social-links {
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    grid-column: span 2;
+    height: 36px;
+}
 
+.footer-link-container>li {
+    margin-bottom: 32px;
+    color: #6B7280;
+    cursor: pointer;
+}
 
 
 
@@ -334,7 +362,9 @@ body {
     }
 
     .navbar,
-    .plants {
+    .plants,
+    .flower-img-container,
+    .flower-content {
         width: 95%;
 
     }
@@ -380,18 +410,12 @@ body {
         flex-direction: column;
         gap: 20px;
     }
-
-    .flower-img-container,
-    .flower-content {
-        width: 95%;
-    }
-
     #badge {
         display: none;
     }
 
     /* latest related styles */
-    .latest {
+    .latest , .footer-container {
         width: 90%;
     }
 
@@ -423,6 +447,24 @@ body {
     .join {
         height: 334px;
         background-size: 200%;
+    }
+
+    /* footer related styles */
+    .footer-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+
+    .footer-content {
+        grid-column: span 1;
+    }
+    .footer-content>img {
+        margin-bottom: 4px;
+    }
+
+    .footer-social-links {
+        justify-content: start;
+        grid-column: span 1;
     }
 
 
@@ -481,7 +523,8 @@ body {
         max-width: 200px;
         max-height: 200px;
     }
-      /* join related styles start */
+
+    /* join related styles start */
     .join {
         height: 434px;
         background-size: 150%;
