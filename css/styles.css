@@ -189,21 +189,25 @@ body {
 }
 
 /* latest related styles */
-.latest{
+.latest {
     text-align: center;
 }
-.latest-card-container{
-    margin-top: clamp(50px, 10vw, 200px);
+
+.latest-card-container {
+    margin-top: clamp(30px, 7vw, 100px);
     display: grid;
-    grid-template-columns: repeat(3 ,1fr);
-    grid-template-rows: repeat(2 ,200px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 200px);
     gap: 10px;
+    font-family: "Noto Serif", serif;
 }
-.latest-card2{
+
+.latest-card2 {
     grid-column: span 2;
     grid-row: span 2;
 }
-.latest-card{
+
+.latest-card {
     position: relative;
     color: white;
     font-size: 1rem;
@@ -212,32 +216,39 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden
-    
 }
+
 .latest-card::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: 1; 
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
     border-radius: 20px;
 }
-.latest-card img{
+
+.latest-card img {
     width: 100%;
     height: 100%;
     border-radius: 20px;
     object-fit: cover;
 }
-.overlay-latest-img{
+
+.overlay-latest-img {
     background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2;  
+    z-index: 2;
     border-radius: 20px;
-    
+
 }
-.latest-discount{
+
+.latest-discount {
     position: absolute;
     z-index: 5;
+}
+
+.latest-card2 h4 {
+    font-size: 2rem;
 }
 
 .latest-discount a {
@@ -246,28 +257,25 @@ body {
     display: inline-block;
     margin-top: 15px;
     font-size: 1.2rem;
-    position: relative; 
+    position: relative;
     padding-bottom: 5px;
 }
 
-/* ::after দিয়ে কাস্টম আন্ডারলাইন তৈরি */
 .latest-discount a::after {
     content: "";
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 0; /* শুরুতে লাইনটি দেখা যাবে না */
-    height: 2px; /* লাইনের পুরুত্ব */
-    background-color: #ff9100; /* আপনার থিমের সাথে মিল রেখে একটি রঙ (যেমন কমলা) */
-    transition: width 0.4s ease; /* এনিমেশন স্পিড */
+    width: 0;
+    height: 2px;
+    background-color: #ff9100;
+    transition: width 0.4s ease;
 }
 
-/* মাউস নিলে লাইনটি বড় হয়ে পুরোটা দেখাবে */
 .latest-discount a:hover::after {
-    width: 100%; /* মাউস নিলে পুরোটা চওড়া হবে */
+    width: 100%;
 }
 
-/* মাউস নিলে বাটনটি সামান্য উপরে উঠবে (ঐচ্ছিক) */
 .latest-discount a:hover {
     transform: translateY(-3px);
     transition: transform 0.3s ease;
@@ -345,6 +353,33 @@ body {
         display: none;
     }
 
+    /* latest related styles */
+    .latest {
+        width: 90%;
+    }
+    .latest-card-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 200px);
+        gap: 10px;
+        font-family: "Noto Serif", serif;
+    }
+
+    .latest-card2 {
+        grid-column: span 1;
+        grid-row: 3;
+    }
+    .latest-card3{
+        grid-row:  2;
+    }
+    .latest-card1{
+        grid-row:  1;
+    }
+    .latest-card2 h4 {
+        font-size: 1rem;
+    }
+
+    
+
 }
 
 
@@ -370,7 +405,8 @@ body {
     .section-description {
         font-size: 1rem;
     }
-    .fixed-width {
+
+    .fixed-width ,.latest{
         width: 90%;
     }
 
