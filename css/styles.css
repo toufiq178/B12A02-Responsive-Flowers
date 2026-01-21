@@ -58,17 +58,51 @@ body {
     font-weight: 600;
     color: white;
     width: 100%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
 
+    /* smooth animation */
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-/*  */
+/* Lift + Glow */
+.btn-primary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(233, 90, 8, 0.45);
+}
+
+/* Shine effect */
+.btn-primary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 120%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.45),
+        transparent
+    );
+     animation: shine 1s linear 1s infinite;
+    animation-fill-mode: forwards;
+}
 
 
+/* Click feedback */
+.btn-primary:active {
+    transform: translateY(-1px) scale(0.97);
+}
 
-
-
-
-
+/* Keyframes */
+@keyframes shine {
+     0% { left: -120%; }
+    100% { left: 120%; }
+}
 
 
 
