@@ -281,6 +281,43 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* join related styles start */
+.join {
+    height: 534px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("/assets/news-letter-bg.png");
+    background-repeat: no-repeat;
+    background-size: 120%;
+    background-position: center center;
+}
+
+.join-container {
+    max-width: 830px;
+}
+.join-container>h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+.email-container>input {
+    background-color: white;
+    padding-left: 20px;
+    width: 70%;
+    border: none;
+    outline: none; 
+}
+.subscribe-btn {
+    width: 30%;
+}
+
+
+
+
+
+
+
 
 
 
@@ -357,6 +394,7 @@ body {
     .latest {
         width: 90%;
     }
+
     .latest-card-container {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(3, 200px);
@@ -368,17 +406,25 @@ body {
         grid-column: span 1;
         grid-row: 3;
     }
-    .latest-card3{
-        grid-row:  2;
+
+    .latest-card3 {
+        grid-row: 2;
     }
-    .latest-card1{
-        grid-row:  1;
+
+    .latest-card1 {
+        grid-row: 1;
     }
+
     .latest-card2 h4 {
         font-size: 1rem;
     }
 
-    
+    /* join related styles start */
+    .join {
+        height: 334px;
+        background-size: 200%;
+    }
+
 
 }
 
@@ -406,7 +452,8 @@ body {
         font-size: 1rem;
     }
 
-    .fixed-width ,.latest{
+    .fixed-width,
+    .latest {
         width: 90%;
     }
 
@@ -434,6 +481,12 @@ body {
         max-width: 200px;
         max-height: 200px;
     }
+      /* join related styles start */
+    .join {
+        height: 434px;
+        background-size: 150%;
+    }
+
 
 
 }
